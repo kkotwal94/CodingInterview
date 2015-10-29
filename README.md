@@ -1,2 +1,2 @@
 # CodingInterview
-Practicing Java interview Questions(Some c++)
+Practicing Java interview Questions(Some C++)
