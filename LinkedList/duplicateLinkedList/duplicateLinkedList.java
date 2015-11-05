@@ -42,7 +42,7 @@ public LinkedList duplicateCheckerNoBuffer(LinkedList ll) {
 		System.out.println("We have a empty linked list");
 		return ll;
 	}
-
+	
 	for(int i = 0; i < length; i++){
 		Object node = ll.get(i);
 		for(int j = i+1; j < length; j++) {
