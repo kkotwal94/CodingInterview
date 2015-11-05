@@ -1,9 +1,10 @@
+import java.util.*;
+
 class minStack {
 
 public class Stack {
 
 	Node top;
-	Object min = null;
 
 	Object pop() {
 		if(top != null) {
@@ -15,12 +16,6 @@ public class Stack {
 	}
 
 	void push(Object item) {
-		if(min == null) {
-			min = item;
-		}
-		if((int)item < (int)min) {
-			min = item;
-		}
 		Node pushed = new Node(item, top);
 		top = pushed;
 	}
@@ -33,12 +28,6 @@ public class Stack {
 		return top.getData();
 	}
 
-	Object minimumValue() {
-		if(min == null) {
-			return null;
-		}
-		return (int)min;
-	}
 }
 
 public class Node {
@@ -108,12 +97,14 @@ public class StackWithMin extends Stack {
 	
 	public static void main(String[] args) {
 		minStack mStack = new minStack();
-		//StackWithMin stackMin = new StackWithMin();
 		mStack.testStack.push(3);
 		mStack.testStack.push(5);
 		mStack.testStack.push(2);
+		mStack.stackMin.push(3);
+		mStack.stackMin.push(4);
+		mStack.stackMin.push(2);
 		System.out.println(mStack.testStack.peek());
-		System.out.println(mStack.stackMin.peek());
+		System.out.println(mStack.stackMin.min());
 		mStack.testStack.pop();
 		
 
