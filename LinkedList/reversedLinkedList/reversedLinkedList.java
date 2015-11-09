@@ -133,7 +133,7 @@ class Node {
 
 public void reverse(NodeLinkedList link) {
 	//System.out.println(link.toString());
-	NodeLinkedList reversed = new NodeLinkedList();
+	//NodeLinkedList reversed = new NodeLinkedList();
 	Node cache = link.head;
 	Node prev = null;
 	Node next;
